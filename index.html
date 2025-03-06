@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cactus Animation with Pure CSS Project - 12</title>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-color: #c8a75f ;
+  }
+  .container{
+    position: absolute;
+    width: 640px;
+    height: 640px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f3dba6;
+    border-radius: 50%;
+  }
+  .ground{
+    position:absolute;
+    width: 640px;
+    height: 15px;
+    background-color: #c6b182;
+    top: 472px;
+    border-radius: 50%;
+
+}
+.vas1{
+  position: absolute;
+ 
+  top: 380px;
+  left: 105px;
+}
+.top{
+  position: absolute;
+  height: 40px;
+  width: 115px;
+  background-color:#eb7d6d ;
+  border: 8px solid #000;
+  border-radius: 5px;
+  z-index: 20;
+}
+.top::after{
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  background-color: #ff6346;
+  right: 0;
+
+}
+.base{
+  position: absolute;
+  height: 40px;
+  width: 90px;
+  background-color:#eb7d6d  ;
+  top: 55px;
+  left: 22px;
+  clip-path: polygon(0 0 , 100% 0, 90% 100%, 10% 100%);
+  z-index: 20;
+}
+.base::before{
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 90px;
+  background-color:#ff6346 ;
+
+}
+.base::after{
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  background-color: #ff6346;
+  right: 0;
+  transform: rotate(15deg);
+}
+.base-border{
+  position: absolute;
+  height: 45px;
+  width: 100px;
+  top: 55px;
+  left: 17px;
+  background-color: #000;
+  clip-path: polygon(0 0 , 100% 0, 90% 100%, 10% 100%);
+  z-index: 10;
+
+}
+.vas2{
+  position: absolute;
+
+  top: 380px;
+  right: 225px;
+}
+.cactus1{
+  position: absolute;
+  top: 255px;
+  left: 125px;
+}
+.plant1{
+  position: absolute;
+  height: 100px;
+  width: 75px;
+  top: 0;
+  background-color: #6cbd24;
+  border: 10px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+  animation: animplant 3s ease-in-out infinite;
+}
+@keyframes animplant {
+  5%{
+    top: -20px;
+  }
+  40%{
+    top: 0;
+  }
+  
+}
+.plant1::after{
+  content: "";
+  position: absolute;
+  height: 121px;
+  width: 75px;
+  background-color: #6cbd24;
+  left: -10px;
+  border-left: 10px solid #000;
+  border-right: 10px solid #000;
+top: 50px;
+z-index: 20;
+}
+.cactus2{
+  position: absolute;
+  top: 255px;
+  right: 205px;
+}
+.plant2{
+  position: absolute;
+  height: 100px;
+  width: 75px;
+  top: -130px;
+  background-color: #6cbd24;
+  border: 10px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+}
+.plant2::after{
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 75px;
+  background-color: #6cbd24;
+  left: -10px;
+  border-left: 10px solid #000;
+  border-right: 10px solid #000;
+top: 50px;
+z-index: 20;
+}
+.plant1-thorn1{
+  position: absolute;
+  height: 5px;
+  width: 120px;
+  background-color: #000;
+  left: -20px;
+  top: 70px;
+  transform: rotate(-15deg);
+
+}
+.plant1-thorn2{
+  position: absolute;
+  height: 5px;
+  width: 120px;
+  background-color: #000;
+  left: -20px;
+  top: 65px;
+  transform: rotate(15deg);
+
+}
+.plant1-thorn3{
+  position: absolute;
+  height: 20px;
+  width: 5px;
+  background-color: #000;
+  left: 50px;
+  top: -20px;
+ 
+
+}
+.plant2-thorn1{
+  position: absolute;
+  height: 5px;
+  width: 150px;
+  background-color: #000;
+  right: -35px;
+  top: 190px;
+  transform: rotate(40deg);
+
+}
+.plant2-thorn2{
+  position: absolute;
+  height: 5px;
+  width: 150px;
+  background-color: #000;
+  right: -35px;
+  top: 140px;
+  transform: rotate(-40deg);
+
+}
+.plant2-thorn3{
+  position: absolute;
+  height: 5px;
+  width: 150px;
+  background-color: #000;
+  right: -35px;
+  top: 90px;
+  transform: rotate(40deg);
+
+}
+.eye{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+
+}
+.p1e1{
+  top:40px;
+  left: 20px;
+}
+.p1e2{
+  top:40px;
+  left: 50px;
+}
+.p2e1{
+  top:40px;
+  left: 10px;
+}
+.p2e2{
+  top:40px;
+  left: 50px;
+}
+.mouth{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  top: 60px;
+  left: 20px;
+  z-index: 60;
+  border-radius: 50%;
+  animation: animmouth 3s ease-in-out infinite;
+}
+@keyframes animmouth {
+  0%{
+    transform: scale(0);
+  }
+  5%{
+    transform: scale(1);
+  }
+  40%, 100%{
+    transform: scale(0);
+    left: 40px;
+  }
+  
+}
+.balloon{
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  top: 250px;
+  left:100px;
+background-color:#4e8dcd ;
+z-index: 100;
+border-radius: 50%;
+border: 5px solid #000;
+transform: rotate(-65deg);
+overflow: hidden;
+
+animation: animballoon 3s ease-in-out infinite;
+}
+@keyframes animballoon {
+  0%, 5%{
+    transform: scale(0);
+  }
+  40%{
+    transform: scale(1);
+    left: 170px;
+  }
+  69%{
+    top: 150px;
+    left: 310px;
+    opacity: 100%;
+  }
+  70%, 100%{
+    opacity: 0%;
+  }
+
+  
+}
+.balloon-shadow{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  top: -50px;
+  left: -10px;
+  border-radius: 50%;
+  background-color: #86b9ed;
+}
+.plus{
+  position: absolute;
+  border-radius: 150px;
+  background-color: #86b9ed;
+
+}
+.plus1{
+  position: absolute;
+  height: 100px;
+  width: 10px;
+}
+.plus2{
+  height: 10px;
+  width: 100px;
+  left: 20px;
+  top: 110px;
+}
+.plus3{
+  position: absolute;
+  height: 100px;
+  width: 10px;
+  top: 130px;
+}
+.plus4{
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  left: -120px;
+  top:110px
+}
+.plus-m1{
+  position: absolute;
+  background-color: #cecf76;
+  height: 5px;
+  width: 50px;
+  top: 50px;
+  left: -90px;
+  transform: rotate(45deg);
+}
+.plus-m2{
+  position: absolute;
+  background-color: #cecf76;
+  height: 5px;
+  width: 50px;
+  top: 180px;
+  left: 40px;
+  transform: rotate(45deg);
+}
+.plus-m3{
+  position: absolute;
+  background-color: #cecf76;
+  height: 5px;
+  width: 50px;
+  top: 50px;
+  left: 40px;
+  transform: rotate(-45deg);
+}
+.plus-m4{
+  position: absolute;
+  background-color: #cecf76;
+  height: 5px;
+  width: 50px;
+  top: 180px;
+  left: -90px;
+  transform: rotate(-45deg);
+}
+.bigPlus{
+  position: absolute;
+  left: 380px;
+  top: 120px;
+  z-index: 150;
+  animation: animbigPlus 3s ease-in-out infinite;
+
+}
+@keyframes animbigPlus {
+  0%, 70%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0;
+  }
+  
+}
+.cactus-vas1{
+  position: absolute;
+  left: 0;
+  animation: animcv1 3s linear infinite;
+}
+@keyframes animcv1 {
+  0%, 74%{
+    left: 0;
+  }
+  80%{
+    left: -30px;
+  }
+  
+}
+.cactus-vas2{
+  position: absolute;
+  right: 0;
+  animation: animcv2 3s linear infinite;
+}
+@keyframes animcv2 {
+  0%, 74%{
+    right: 0;
+  }
+  80%{
+    right: -30px;
+  }
+  
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="cactus-vas1">
+      <div class="cactus1">
+        <div class="plant1">
+          <div class="eye p1e1"></div>
+          <div class="eye p1e2"></div>
+          <div class="mouth"></div>
+          <div class="plant1-thorn1"></div>
+          <div class="plant1-thorn2"></div>
+          <div class="plant1-thorn3"></div>
+        </div>
+      </div>
+      <div class="vas1">
+        <div class="top"></div>
+        <div class="base"></div>
+        <div class="base-border"></div>
+      </div>
+    </div>
+    <div class="cactus-vas2">
+      <div class="cactus2">
+        <div class="plant2">
+          <div class="eye p2e1"></div>
+          <div class="eye p2e2"></div>
+          <div class="plant2-thorn1"></div>
+          <div class="plant2-thorn2"></div>
+          <div class="plant2-thorn3"></div>
+        </div>
+      </div>
+      <div class="vas2">
+        <div class="top"></div>
+        <div class="base"></div>
+        <div class="base-border"></div>
+      </div>
+    </div>
+    <div class="balloon">
+      <div class="balloon-shadow"></div>
+    </div>
+    <div class="bigPlus">
+      <div class="plus plus1"></div>
+      <div class="plus plus-m1"></div>
+
+      <div class="plus plus2"></div>
+      <div class="plus plus-m2"></div>
+
+      <div class="plus plus3"></div>
+      <div class="plus plus-m3"></div>
+
+      <div class="plus plus4"></div>
+      <div class="plus plus-m4"></div>
+    </div>
+    <div class="ground"></div>
+  </div>
+</body>
+</html>
